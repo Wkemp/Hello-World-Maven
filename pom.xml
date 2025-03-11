@@ -33,9 +33,10 @@
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
+         <version>3.9.9</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>17</source>
+          <target>17</target>
         </configuration>
       </plugin>
 
@@ -72,12 +73,7 @@
 
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
-              <artifactId>findbugs-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>taglist-maven-plugin</artifactId>
+              <artifactId>spotbugs-maven-plugin</artifactId>
             </plugin>
           </reportPlugins>
         </configuration>
@@ -93,7 +89,7 @@
 
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
+          <version>3.9.9</version>
         </plugin>
 
         <plugin>
@@ -156,7 +152,7 @@
         <plugin>
           <groupId>org.mortbay.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
-          <version>8.0.0.M1</version>
+          <version>11.0.24</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -179,7 +175,7 @@
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit-dep</artifactId>
-        <version>4.10</version>
+        <version>5.10.2</version>
         <scope>test</scope>
       </dependency>
 
