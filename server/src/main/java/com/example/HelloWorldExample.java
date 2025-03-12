@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5">
-  <display-name>Webapp</display-name>
-  <!--
-  <servlet>
-  <servlet-name>HelloWorldExample</servlet-name>
-  <servlet-class>com.example.HelloWorldExample</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>HelloWorldExample</servlet-name>
-  <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  -->
-</web-app>
+package com.example;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloWorldExample extends HttpServlet {
+         private static final long serialVersionUID = 1L;
+
+         @Override
+         protected void doGet(HttpServletRequest request, HttpServlet response)
+                           throws ServletException, IOException {
+                  response.setContentType("text/html");
+                  response.getWriter().println("<h1>Hello World!!!!</h1>");
+                           }
+}
