@@ -1,6 +1,6 @@
 # Pull base image 
-From tomcat:8-jre8 
+From tomcat:10.1.39-jre17-temurin-jammy
 
-# Maintainer 
-MAINTAINER "wkemp@murraystate.edu" 
 COPY ./webapp.war /usr/local/tomcat/webapps
+
+EXPOSE 8080
