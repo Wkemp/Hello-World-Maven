@@ -17,6 +17,13 @@ public class HelloWorldExample extends HttpServlet {
                            throws ServletException, IOException {
                   response.setContentType("text/html");
                   response.setCharacterEncoding("UTF-8");
-                  response.getWriter().println("<h1>Hello World!!!!</h1>");
-                           }
+
+                  // Get User input from query parameter
+                 String name = request.getParameter("name");
+                 if (name == null || name.trim().isEmpty()) {
+                     name = "Guest"; // Default if no input
+                 }
+
+                 response.getWriter().println("<h1>Hello, " + name + ", this is a Java servlet test!</h1>");
+         }
 }
